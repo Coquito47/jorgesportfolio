@@ -1,0 +1,215 @@
+.landing-screen {
+  width: 100%;
+  height: 100vh;
+  clear: both;
+  float: left;
+  position: relative;
+  margin-bottom: 190px;
+}
+
+.landing-screen .background-img {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(https://img.freepik.com/free-vector/hand-painted-watercolor-abstract-watercolor-background_23-2149009911.jpg?w=2000);
+}
+.landing-screen .container {
+  height: 100%;
+}
+.landing-screen .content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.welcome-section {
+  width: 50%;
+  padding-right: 20px;
+}
+.landing-screen .hello h3 {
+  font-size: 45px;
+}
+.landing-screen .name {
+  margin-bottom: 18px;
+}
+.landing-screen .name h3 {
+  font-size: 85px;
+}
+.landing-screen .job-title {
+  margin-bottom: 35px;
+}
+.landing-screen .job-title p {
+  font-size: 28px;
+  font-weight: 500;
+}
+.landing-screen .text {
+  margin-bottom: 42px;
+}
+.landing-screen .text p {
+  font-size: 23px;
+  line-height: 1.5;
+}
+.landing-screen .button-auto {
+  display: flex;
+  text-align: center;
+}
+.landing-screen .button-sizing {
+  width: auto;
+}
+
+.button a{
+  display: block;
+  width: 200px;
+  height: 50px;
+  padding:10px;
+  border-radius:12px;
+  font-size: 18px;
+  font-weight:600;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #333;
+  border: 2px solid #333;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+}
+
+.button a span{
+  position: relative;
+  z-index: 2;
+}
+
+.button a:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--color);
+  transition: all .35s;
+  border-radius:12px;
+}
+
+.button a:hover{
+  color: #fff;
+}
+
+.button a:hover:after{
+  width: 100%;
+}
+.landing-screen .profile-picture-section {
+  width: 50%;
+  padding-left: 100px;
+}
+.landing-screen .image {
+  position: relative;
+}
+.landing-screen .profile-picture-section img {
+  max-height: 650px;
+  transition: all 0.3s;
+}
+/* media quires*/
+
+@media (max-width: 1600px) {
+  .landing-screen .hello h3 {
+    font-size: 25px;
+  }
+  .landing-screen .name {
+    margin-bottom: 13px;
+  }
+  .landing-screen .name h3 {
+    font-size: 60px;
+  }
+  .landing-screen .job-title {
+    margin-bottom: 23px;
+  }
+  .landing-screen .job-title p {
+    font-size: 19px;
+  }
+  .landing-screen .text p {
+    font-size: 16px;
+  }
+  .landing-screen .text {
+    margin-bottom: 30px;
+  }
+  .landing-screen .image img {
+    max-height: 400px;
+    transition: all 0.3s;
+  }
+}
+@media (max-width: 1040px) {
+  .section .content {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .landing-screen .welcome-section {
+    width: 100%;
+    padding-right: 0;
+    text-align: center;
+  }
+  .landing-screen .hello h3 {
+    font-size: 25px;
+  }
+  .landing-screen .name {
+    margin-bottom: 11px;
+  }
+  .landing-screen .name h3 {
+    font-size: 55px;
+  }
+  .landing-screen .job-title {
+    margin-bottom: 23px;
+  }
+  .landing-screen .job-title p {
+    font-size: 23px;
+  }
+  .landing-screen .text {
+    margin-bottom: 30px;
+  }
+  .landing-screen .text p {
+    font-size: 20px;
+  }
+  .landing-screen .button a{
+    margin:0 auto;
+  }
+  .landing-screen .profile-picture-section {
+    padding: 0px;
+    width: auto;
+    margin-bottom: 30px;
+  }
+  .landing-screen .profile-picture-section img {
+    max-height: 300px;
+    max-width: 300px;
+  }
+}
+@media (max-width: 770px) {
+  .landing-screen {
+    margin-bottom: 135px;
+  }
+  .landing-screen .hello h3 {
+    font-size: 21px;
+  }
+  .landing-screen .name h3 {
+    font-size: 42px;
+  }
+  .landing-screen .job-title {
+    margin-bottom: 15px;
+  }
+  .landing-screen .job-title p {
+    font-size: 18px;
+  }
+  .landing-screen .text p {
+    font-size: 16px;
+  }
+  .landing-screen .profile-picture-section img {
+    max-height: 220px;
+    max-width: 220px;
+  }
+}

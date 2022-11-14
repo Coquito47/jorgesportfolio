@@ -1,0 +1,149 @@
+@media (max-width: 1040px) {
+  .mobile-menu {
+    display: block !important;
+  }
+  nav ul{
+    display:block;
+    background:rgba(255, 255, 255,0.8);
+  }
+  nav ul li{
+  background-color: rgba(255, 255, 255, 0.9);
+  }
+  ul li:hover{
+    background:rgba(255, 255, 255,0.7)
+  }
+
+}
+@media (min-width: 1040px) {
+  .nav-toggle-label {
+    display: none;
+  }
+}
+.mobile-menu {
+  display: none;
+  background:rgba(255, 255, 255,0.9);
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+}
+
+.mobile-menu .mobile-menu-padding {
+  width: 100%;
+  height: auto;
+  float: left;
+  clear: both;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px 20px 10px 20px;
+}
+
+.mobile-menu .mobile-menu-spacing {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-lettering {
+  color: #000000;
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-toggle {
+  position: absolute !important;
+  top: -9999px !important;
+  right: -9999px !important;
+}
+
+.nav-toggle:focus ~ .nav-toggle-label {
+  outline: 3px solid rgba(lightblue, 0.75);
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+  background-color: black;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav {
+  position: absolute;
+  text-align: right;
+  top: 100%;
+  right: -20px;
+  background: var(--background);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top right;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-right: 2em;
+  margin-top: 1em;
+}
+
+nav a {
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}

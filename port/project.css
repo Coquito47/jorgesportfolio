@@ -1,0 +1,48 @@
+.project {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  padding-top: 185px;
+  margin-bottom: 165px;
+  position: relative;
+  z-index:2;
+}
+
+.project .project-grid .mobile-title {
+  margin-top: 15px;
+  text-align: left;
+  line-height: 30px;
+}
+.project-background-img1 img {
+  max-height: 400px;
+  position: absolute;
+  top: 150px;
+  left: 50px;
+  z-index: 0;
+  opacity: 0.8;
+}
+
+.project-background-img2 img {
+  max-height: 300px;
+  position: absolute;
+  bottom: 200px;
+  right: 80px;
+  opacity: 0.8;
+  z-index: 0;
+}
+.footer {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  background-color: #f2f5fb;
+  padding: 57px 0px 61px 0px;
+}
+
+@media (max-width: 1040px) {
+  .project-background-img1,
+  .project-background-img2 {
+    display: none;
+  }
+}

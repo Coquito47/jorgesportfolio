@@ -1,0 +1,87 @@
+/* starting of desktop classes */
+
+.desk-header {
+  background-color: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 10;
+  padding: 25px 0px;
+}
+
+.desk-header .desk-header-spacing {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.desk-header .menu {
+  transition: all 0.3s;
+}
+.desk-header .menu ul {
+  margin: 0px;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.desk-header .menu ul li {
+  margin: 0px 48px 0px 0px;
+  display: inline-block;
+  background:transparent;
+}
+.desk-header .menu ul li:last-child {
+  margin-right: 0;
+}
+.desk-header .menu ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-family: "Jost", sans-serif;
+  position: relative;
+  z-index: 999;
+}
+
+/* media quires*/
+
+@media (max-width: 1600px) {
+  .desk-header {
+    padding: 15px 0;
+  }
+  .desk-header .menu ul li {
+    margin-right: 30px;
+  }
+}
+@media (max-width: 1270px) {
+  .menu {
+    margin-right: 5em;
+    transition: all 0.3s;
+  }
+}
+
+@media (max-width: 1040px) {
+  .desk-header {
+    display: none;
+  }
+}
+
+/* animation */
+@media (min-width: 1040px) {
+  .menu a::before {
+    content: "";
+    display: block;
+    height: 5px;
+    background: black;
+    position: absolute;
+    top: -0.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+
+  .menu a:hover::before {
+    transform: scale(1, 1);
+  }
+}
